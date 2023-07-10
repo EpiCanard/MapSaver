@@ -5,6 +5,7 @@ authors:
   - EpiCanard
   - Ikkino
 api-version: 1.16
+folia-supported: false
 commands:
   mapsaver:
     description: Main command to interact with MapSaver
