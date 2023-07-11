@@ -10,6 +10,7 @@ scalacOptions ++= Seq(
   "-Ymacro-annotations"
 )
 artifactName := { (_, _, _) => s"${name.value}-${version.value}.jar" }
+updateOptions := updateOptions.value.withLatestSnapshots(false)
 
 resolvers ++= Dependencies.resolvers
 

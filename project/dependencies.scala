@@ -1,8 +1,8 @@
 import sbt._
 
 object Dependencies {
-  private val scalaPluginLoaderVersion = "0.17.1"
-  private val spigotVersion            = "1.17-R0.1-SNAPSHOT"
+  private val scalaPluginLoaderVersion = "0.18.6-SNAPSHOT"
+  private val spigotVersion            = "1.20-R0.1-SNAPSHOT"
   private val circeVersion             = "0.14.0"
   private val enumeratumVersion        = "1.7.0"
   private val slickVersion             = "3.3.3"
@@ -12,11 +12,11 @@ object Dependencies {
 
   val resolvers = Seq(
     Resolver.mavenCentral,
-    "jitpack" at "https://jitpack.io",
+    "jannyboy11-minecraft-repo" at "https://repo.repsy.io/mvn/jannyboy11/minecraft",
     "spigot-repo" at "https://hub.spigotmc.org/nexus/content/repositories/snapshots/"
   )
 
-  val scalaPluginLoader = "com.github.Jannyboy11.ScalaPluginLoader" % "ScalaLoader" % scalaPluginLoaderVersion
+  val scalaPluginLoader = "com.janboerman.scalaloader" % "ScalaLoader" % scalaPluginLoaderVersion
 
   val spigot = "org.spigotmc" % "spigot-api" % spigotVersion
 
