@@ -4,6 +4,7 @@ object Dependencies {
   private val scalaPluginLoaderVersion = "0.18.6-SNAPSHOT"
   private val spigotVersion            = "1.20-R0.1-SNAPSHOT"
   private val circeVersion             = "0.14.0"
+  private val circeYamlVersion         = "0.15.0-RC1"
   private val enumeratumVersion        = "1.7.0"
   private val slickVersion             = "3.3.3"
   private val slickCatsVersion         = "0.10.4"
@@ -26,13 +27,13 @@ object Dependencies {
     "com.beachape" %% "enumeratum-slick"
   ).map(_ % enumeratumVersion)
 
+  val circeYaml = "io.circe" %% "circe-yaml" % circeYamlVersion
   val circe = Seq(
     "io.circe" %% "circe-core",
     "io.circe" %% "circe-generic",
     "io.circe" %% "circe-parser",
-    "io.circe" %% "circe-yaml",
     "io.circe" %% "circe-generic-extras"
-  ).map(_ % circeVersion)
+  ).map(_ % circeVersion) :+ circeYaml
 
   val slick = Seq(
     "com.typesafe.slick" %% "slick"          % slickVersion,
